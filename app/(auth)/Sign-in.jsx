@@ -27,11 +27,11 @@ const SignIn = () => {
 //     setSubmitting(true);
 
 //     try {
-//       // await signIn(form.email, form.password);
+//       await signIn(form.email, form.password);
 
-//       // const result = await getCurrentUser();
-//       // setUser(result);
-//       // setIsLogged(true);
+//       const result = await getCurrentUser();
+//       setUser(result);
+//       setIsLogged(true);
 
 //       Alert.alert("Success", "User signed in successfully");
 //       router.replace("/home");

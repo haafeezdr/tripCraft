@@ -51,7 +51,7 @@ export default function WelcomeSwiper() {
       <Welcome3 />
       <View className="justify-center items-center"> 
         <CustomButton title="Get Started" 
-          handlePress={() => router.push('/Sign-in')}
+          handlePress={() => router.push('/Sign-up')}
           containerStyles=" w-[90%]"
           textStyles="text-[#fff]"/>
       </View>

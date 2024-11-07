@@ -8,7 +8,7 @@ import FormField from '../components/FormField'
 import CustomButton from '../components/CustomButton'
 import AuthHeader from '../components/AuthHeader'
 import AuthSocials from '../components/AuthSocials'
-// import {  getCurrentUser, signIn } from '../../lib/appwrite'
+import {  createUser } from '../../lib/appwrite'
 // import { useGlobalContext } from "../../context/GlobalProvider";
 
 const SignUp = () => {
@@ -17,31 +17,32 @@ const SignUp = () => {
   const [form, setForm] = useState({
     name: "",
     email: "",
-    password: "",
+    password: ""
   });
 
-// const submit = async () => {
-//   if(form.name === "" || form.email === "" || form.password === "") 
-//   {
-//     Alert.alert("Error","Please fill in all the fields")
-//   }
-//     setSubmitting(true);
 
-//     try {
-//      
-//       // const result = await createUser(form.email, form.password, form.username);
-//       // setUser(result);
-//       // setIsLogged(true);
+const submit = async () => {
+  if(form.name === "" || form.email === "" || form.password === "") 
+  {
+    Alert.alert("Error","Please fill in all the fields")
+  }
+    setSubmitting(true);
 
-//       Alert.alert("Success", "User signed up successfully");
-//       router.replace("/home");
-//     } catch (error) {
-//       Alert.alert("Error", error.message)
-//     } finally {
-//       setSubmitting(false);
-//     }
+    try {
+     
+      const result = await createUser(form.email, form.password, form.name);
+      setUser(result);
+      setIsLogged(true);
+
+
+      router.replace("/home");
+    } catch (error) {
+      Alert.alert("Error", error.message)
+    } finally {
+      setSubmitting(false);
+    }
  
-// }
+}
 
   return (
     <SafeAreaView className="bg-white h-full">
@@ -79,14 +80,14 @@ const SignUp = () => {
             <Text className="text-[#7D848D] text-sm font-pregular mt-2">Password must be 8 characters or more!</Text>
             <CustomButton
               title="Sign Up"
-              // handlePress={submit}
+              handlePress={submit}
               containerStyles=" mt-7 w-full"
               isLoading={isSubmitting} />
 
               <View className="flex-row flex justify-center pt-5 gap-2">
                 <Text className="text-gray-100 text-lg font-pregular">Already have an account?
                 </Text>
-                <Link href="/Sign-up"
+                <Link href="/Sign-in"
                  className="text-[#00174B] text-lg font-psemibold">
                   Sign In
                 </Link>
