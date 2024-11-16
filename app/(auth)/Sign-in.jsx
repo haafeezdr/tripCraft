@@ -8,7 +8,7 @@ import FormField from '../components/FormField'
 import CustomButton from '../components/CustomButton'
 import AuthHeader from '../components/AuthHeader'
 import AuthSocials from '../components/AuthSocials'
-// import {  getCurrentUser, signIn } from '../../lib/appwrite'
+import {  getCurrentUser, signIn } from '../../lib/appwrite'
 // import { useGlobalContext } from "../../context/GlobalProvider";
 
 const SignIn = () => {
@@ -19,29 +19,29 @@ const SignIn = () => {
     password: "",
   });
 
-// const submit = async () => {
-//   if(form.email === "" || form.password === "") 
-//   {
-//     Alert.alert("Error","Please fill in all the fields")
-//   }
-//     setSubmitting(true);
+const submit = async () => {
+  if(form.email === "" || form.password === "") 
+  {
+    Alert.alert("Error","Please fill in all the fields")
+  }
+    setSubmitting(true);
 
-//     try {
-//       await signIn(form.email, form.password);
+    try {
+      await signIn(form.email, form.password);
 
-//       const result = await getCurrentUser();
-//       setUser(result);
-//       setIsLogged(true);
+      // const result = await getCurrentUser();
+      // setUser(result);
+      // setIsLogged(true);
 
-//       Alert.alert("Success", "User signed in successfully");
-//       router.replace("/home");
-//     } catch (error) {
-//       Alert.alert("Error", error.message)
-//     } finally {
-//       setSubmitting(false);
-//     }
+      Alert.alert("Success", "User signed in successfully");
+      router.replace("/home");
+    } catch (error) {
+      Alert.alert("Error", error.message)
+    } finally {
+      setSubmitting(false);
+    }
  
-// }
+}
 
   return (
     <SafeAreaView className="bg-white h-full">
@@ -74,7 +74,7 @@ const SignIn = () => {
             </View>
             <CustomButton
               title="Sign In"
-              // handlePress={submit}
+              handlePress={submit}
               containerStyles=" mt-7 w-full"
               isLoading={isSubmitting} />
 

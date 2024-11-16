@@ -15,13 +15,11 @@ const ForgotPassword = () => {
   // const { setUser, setIsLogged } = useGlobalContext();
   const [isSubmitting, setSubmitting] = useState(false);
   const [form, setForm] = useState({
-    name: "",
     email: "",
-    password: "",
   });
 
 // const submit = async () => {
-//   if(form.name === "" || form.email === "" || form.password === "") 
+//   if(form.email === "") 
 //   {
 //     Alert.alert("Error","Please fill in all the fields")
 //   }
