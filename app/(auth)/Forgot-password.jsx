@@ -43,10 +43,10 @@ const ForgotPassword = () => {
 
   return (
     <SafeAreaView className="bg-white h-full">
-        <Link href="/Sign-in" className='ml-4 mt-4'>
+        <Link href="/Sign-in" className='ml-4 mt-8'>
           <Image source={icons.arrow} className="w-12 h-12 " resizeMode='contain'/>
         </Link>
-        <View className=" w-full px-4 my-6 justify-center items-center">
+        <View className=" w-full px-4 my-10 justify-center items-center">
           <AuthHeader
             title="Forgot Password"
             description="Enter the email associated with your  account to reset  your password"

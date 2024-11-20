@@ -47,7 +47,7 @@ const submit = async () => {
   return (
     <SafeAreaView className="bg-white h-full">
       <ScrollView>
-        <Link href="/Sign-in" className='ml-4 mt-4'>
+        <Link href="/" className='ml-4 mt-4'>
           <Image source={icons.arrow} className="w-12 h-12 " resizeMode='contain'/>
         </Link>
         <View className="min-h-[84vh] w-full px-4 my-6 justify-center items-center">

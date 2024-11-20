@@ -1,4 +1,4 @@
-import { View, Text, Image } from 'react-native'
+import { View, Text, Image } from 'react-native';
 
 const WelcomePage = ({ picture, title, discription }) => {
   return (
