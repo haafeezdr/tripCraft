@@ -59,12 +59,11 @@ const ForgotPassword = () => {
               otherStyles="mt-7"
               keyboardType="email-address"
             />
-            
-            <CustomButton
-              title="Continue"
-              // handlePress={submit}
-              containerStyles=" mt-7 w-full"
-              isLoading={isSubmitting} />
+
+            <Link href="/Check-mail"
+                 className="bg-primary rounded-xl min-h-[62px] justify-center items-center  w-full mt-7">
+              <Text className={'text-[#FFFFFF] mt-2 font-psemibold text-lg text-center justify-center '}>Continue</Text>
+            </Link>
 
               
         </View>

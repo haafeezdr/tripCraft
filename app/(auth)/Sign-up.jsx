@@ -52,7 +52,7 @@ const submit = async () => {
         </Link>
         <View className="min-h-[84vh] w-full px-4 my-6 justify-center items-center">
           <AuthHeader
-            title="Sign up to TripCraft"
+            title="Sign Up"
             description="Please fill the details to create account"
           />
             <FormField 
@@ -77,7 +77,9 @@ const submit = async () => {
               handleChangeText={(e) => setForm({...form, password: e})}
               otherStyles="mt-7"
             />
-            <Text className="text-[#7D848D] text-sm font-pregular mt-2">Password must be 8 characters or more!</Text>
+            <View className="flex-row justify-start w-full mt-3">  
+              <Text className="text-[#7D848D] text-sm font-pregular">Password must be 8 characters or more!</Text>
+            </View>
             <CustomButton
               title="Sign Up"
               handlePress={submit}

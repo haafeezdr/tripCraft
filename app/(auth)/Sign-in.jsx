@@ -51,7 +51,7 @@ const submit = async () => {
         </Link>
         <View className="min-h-[84vh] w-full px-4 my-6 justify-center items-center">
           <AuthHeader
-            title="Sign in to TripCraft"
+            title="Sign In"
             description="Please sign in to continue "
           />
             <FormField 
@@ -70,7 +70,7 @@ const submit = async () => {
               otherStyles="mt-7"
             />
             <View className="flex-row justify-end w-full mt-3">
-              <Link href="/Forgot-password"  className="text-[#F50000] text-lg font-semibold ">Forget Password</Link>
+              <Link href="/Forgot-password"  className="text-[#F50000] text-lg font-semibold ">Forget Password?</Link>
             </View>
             <CustomButton
               title="Sign In"

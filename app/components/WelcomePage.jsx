@@ -5,8 +5,8 @@ const WelcomePage = ({ picture, title, discription }) => {
     <View className= "h-[80%]">
         <Image 
             source={picture} 
-            className="w-full"
-            resizeMode='cover'
+            className="w-full h-[75%]"
+            // resizeMode='cover'
               />     
         <View className="justify-center items-center p-4">
             <Text className="text-3xl text-primary text-center  font-bold">{title}</Text>

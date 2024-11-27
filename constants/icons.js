@@ -6,6 +6,7 @@ import x from "../assets/icons/x.png";
 import arrow from "../assets/icons/arrow.png";
 import facebook from "../assets/icons/facebook.png";
 import google from "../assets/icons/google.png";
+import bigmail from "../assets/icons/bigmail.png";
 
 
 
@@ -17,5 +18,6 @@ export default {
   x,
   facebook,
   google,
-  arrow
+  arrow,
+  bigmail
 };
